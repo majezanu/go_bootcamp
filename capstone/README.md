@@ -71,3 +71,85 @@ curl --location --request GET 'http://localhost:1000/quantity/'
     "description": "open ./data/pokemon1.csv: no such file or directory"
 }
 ```
+### Second endpoint
+This endpoint will return a pokemon by its id
+```bash
+curl --location --request GET 'http://localhost:1000/id/1'
+```
+```json
+{
+    "id": 1,
+    "name": "bulbasaur"
+}
+```
+* Id param should be a number
+```bash
+curl --location --request GET 'http://localhost:1000/id/x'
+```
+```json
+{
+    "code": 422,
+    "description": "Bad format :id should be a number"
+}
+```
+* There is no pokemon with that id
+```bash
+curl --location --request GET 'http://localhost:1000/id/10'
+```
+```json
+{
+    "code": 404,
+    "description": "There is no pokemon with id"
+}
+```
+* If there is an error procesing the csv data, then it will return an error.
+```bash
+curl --location --request GET 'http://localhost:1000/id/'
+```
+```json
+{
+    "code": 404,
+    "description": "open ./data/pokemon1.csv: no such file or directory"
+}
+```
+### Third endpoint
+This endpoint will return a pokemon by its name
+```bash
+curl --location --request GET 'http://localhost:1000/name/bulbasaur'
+```
+```json
+{
+    "id": 1,
+    "name": "bulbasaur"
+}
+```
+* Name param should be a string
+```bash
+curl --location --request GET 'http://localhost:1000/name/'
+```
+```json
+{
+    "code": 422,
+    "description": "Bad format :name should be a string"
+}
+```
+* There is no pokemon with that name
+```bash
+curl --location --request GET 'http://localhost:1000/name/10'
+```
+```json
+{
+    "code": 404,
+    "description": "There is no pokemon with name"
+}
+```
+* If there is an error procesing the csv data, then it will return an error.
+```bash
+curl --location --request GET 'http://localhost:1000/name/'
+```
+```json
+{
+    "code": 404,
+    "description": "open ./data/pokemon1.csv: no such file or directory"
+}
+```
