@@ -1,9 +1,9 @@
 package services
 
 import (
-	"api/dataclass"
-	"api/repository"
 	"fmt"
+	"majezanu/capstone/api/dataclass"
+	"majezanu/capstone/api/repository"
 	"net/http"
 	"strconv"
 )

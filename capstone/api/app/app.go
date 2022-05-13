@@ -1,9 +1,9 @@
 package app
 
 import (
-	"api/controllers"
 	"fmt"
 	"log"
+	"majezanu/capstone/api/controllers"
 	"net/http"
 )
 

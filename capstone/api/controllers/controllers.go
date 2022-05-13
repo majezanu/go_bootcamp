@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"api/services"
 	"encoding/json"
 	"log"
+	"majezanu/capstone/api/services"
 	"net/http"
 	"strings"
 )

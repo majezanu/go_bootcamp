@@ -1,7 +1,7 @@
 package main
 
 import (
-	"api/app"
+	"majezanu/capstone/api/app"
 )
 
 func main() {

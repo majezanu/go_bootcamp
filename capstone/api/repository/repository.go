@@ -1,15 +1,15 @@
 package repository
 
 import (
-	"api/models"
 	"encoding/csv"
 	"errors"
 	"io"
+	"majezanu/capstone/api/models"
 	"os"
 	"strconv"
 )
 
-const dataFilePath = "./data/pokemon1.csv"
+const dataFilePath = "./data/pokemon.csv"
 
 func FetchPokemonData() (data []models.Pokemon, err error) {
 	csvFile, err := os.Open(dataFilePath)
